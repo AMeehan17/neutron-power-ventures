@@ -44,9 +44,9 @@ export default function Home() {
             Our Mission
           </h2>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-center">
-            At Neutron Power Ventures, we're committed to accelerating the development of nuclear technology 
+            At Neutron Power Ventures, we&apos;re committed to accelerating the development of nuclear technology 
             that will power our future. We invest in innovative companies that are pushing the boundaries 
-            of what's possible in nuclear energy, from advanced reactors to fusion technology.
+            of what&apos;s possible in nuclear energy, from advanced reactors to fusion technology.
           </p>
         </div>
       </section>

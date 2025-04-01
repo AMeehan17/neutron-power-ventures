@@ -30,7 +30,7 @@ export default function ContactForm() {
       } else {
         throw new Error('Form submission failed');
       }
-    } catch (error) {
+    } catch {
       setStatus('error');
       setMessage('Sorry, there was an error sending your message. Please try again later.');
     }
