@@ -1,0 +1,98 @@
+'use client';
+
+import { useState } from 'react';
+import Link from 'next/link';
+
+export default function MobileMenu() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="md:hidden">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="p-2 rounded-lg hover:bg-white/5 transition-colors"
+        aria-label="Toggle menu"
+      >
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          {isOpen ? (
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          ) : (
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          )}
+        </svg>
+      </button>
+
+      {/* Mobile menu overlay */}
+      <div
+        className={`fixed inset-0 bg-neutral-black/95 backdrop-blur-lg z-50 transform transition-transform duration-300 ease-in-out ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <div className="flex flex-col h-full p-6">
+          <div className="flex justify-end mb-8">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="p-2 rounded-lg hover:bg-white/5 transition-colors"
+              aria-label="Close menu"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          
+          <nav className="flex-1 flex flex-col items-center justify-center space-y-8">
+            <Link
+              href="#mission"
+              onClick={() => setIsOpen(false)}
+              className="text-2xl font-medium hover:text-neutral-green transition-colors"
+            >
+              Mission
+            </Link>
+            <Link
+              href="#contact"
+              onClick={() => setIsOpen(false)}
+              className="text-2xl font-medium hover:text-neutral-green transition-colors"
+            >
+              Contact
+            </Link>
+            <Link
+              href="https://calendly.com/andrewmeehan17"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+              className="bg-neutral-green text-neutral-black px-6 py-3 rounded-full hover:bg-neutral-green/90 transition-colors font-medium text-lg"
+            >
+              Schedule Meeting
+            </Link>
+          </nav>
+        </div>
+      </div>
+    </div>
+  );
+} 
