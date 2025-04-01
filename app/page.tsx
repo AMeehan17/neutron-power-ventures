@@ -108,27 +108,27 @@ export default function Home() {
             </p>
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8">
               <div className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-neutral-violet/50 transition-colors group">
-                <div className="w-10 h-10 bg-neutral-violet/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-neutral-violet/30 transition-colors">
-                  <svg className="w-5 h-5 text-neutral-violet" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                <div className="w-8 h-8 bg-neutral-violet/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-neutral-violet/30 transition-colors">
+                  <svg className="w-4 h-4 text-neutral-violet" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Innovation</h3>
                 <p className="text-white/70">Pushing the boundaries of nuclear technology</p>
               </div>
               <div className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-neutral-green/50 transition-colors group">
-                <div className="w-10 h-10 bg-neutral-green/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-neutral-green/30 transition-colors">
-                  <svg className="w-5 h-5 text-neutral-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <div className="w-8 h-8 bg-neutral-green/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-neutral-green/30 transition-colors">
+                  <svg className="w-4 h-4 text-neutral-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Investment</h3>
                 <p className="text-white/70">Strategic funding for promising ventures</p>
               </div>
               <div className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-neutral-violet/50 transition-colors group">
-                <div className="w-10 h-10 bg-neutral-violet/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-neutral-violet/30 transition-colors">
-                  <svg className="w-5 h-5 text-neutral-violet" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                <div className="w-8 h-8 bg-neutral-violet/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-neutral-violet/30 transition-colors">
+                  <svg className="w-4 h-4 text-neutral-violet" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Impact</h3>
@@ -166,16 +166,16 @@ export default function Home() {
               <div className="space-y-4">
                 <p>
                   <a href="mailto:andrewmeehan17@gmail.com" className="hover:text-neutral-green transition-colors flex items-center justify-center md:justify-start gap-2">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                     andrewmeehan17@gmail.com
                   </a>
                 </p>
                 <p>
                   <a href="tel:+12055686657" className="hover:text-neutral-green transition-colors flex items-center justify-center md:justify-start gap-2">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                     +1 (205) 568-6657
                   </a>
@@ -187,24 +187,24 @@ export default function Home() {
               <div className="space-y-4">
                 <p>
                   <Link href="#mission" className="hover:text-neutral-green transition-colors flex items-center justify-center md:justify-end gap-2">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                     Mission
                   </Link>
                 </p>
                 <p>
                   <Link href="#contact" className="hover:text-neutral-green transition-colors flex items-center justify-center md:justify-end gap-2">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                     Contact Us
                   </Link>
                 </p>
                 <p>
                   <Link href="https://calendly.com/andrewmeehan17" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-green transition-colors flex items-center justify-center md:justify-end gap-2">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                     Schedule a Meeting
                   </Link>
