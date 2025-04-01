@@ -9,9 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'neutron-violet': '#8A2BE2',
-        'neutron-green': '#39FF14',
-        'neutron-black': '#000000',
+        'neutral-black': '#000000',
+        'neutral-violet': '#8A2BE2',
+        'neutral-green': '#39FF14',
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out forwards',
