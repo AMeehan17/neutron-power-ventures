@@ -38,8 +38,8 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} action="https://formspree.io/f/xpzvjvjv" method="POST" className="space-y-6">
-      <div>
-        <label htmlFor="name" className="block text-sm font-medium mb-2">
+      <div className="space-y-2">
+        <label htmlFor="name" className="block text-sm font-medium text-white/90">
           Name
         </label>
         <input
@@ -47,11 +47,12 @@ export default function ContactForm() {
           id="name"
           name="name"
           required
-          className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:border-neutral-green"
+          className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:border-neutral-green focus:ring-2 focus:ring-neutral-green/20 transition-all"
+          placeholder="Your name"
         />
       </div>
-      <div>
-        <label htmlFor="email" className="block text-sm font-medium mb-2">
+      <div className="space-y-2">
+        <label htmlFor="email" className="block text-sm font-medium text-white/90">
           Email
         </label>
         <input
@@ -59,11 +60,12 @@ export default function ContactForm() {
           id="email"
           name="email"
           required
-          className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:border-neutral-green"
+          className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:border-neutral-green focus:ring-2 focus:ring-neutral-green/20 transition-all"
+          placeholder="your@email.com"
         />
       </div>
-      <div>
-        <label htmlFor="message" className="block text-sm font-medium mb-2">
+      <div className="space-y-2">
+        <label htmlFor="message" className="block text-sm font-medium text-white/90">
           Message
         </label>
         <textarea
@@ -71,14 +73,15 @@ export default function ContactForm() {
           name="message"
           required
           rows={4}
-          className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:border-neutral-green"
+          className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:border-neutral-green focus:ring-2 focus:ring-neutral-green/20 transition-all resize-none"
+          placeholder="Your message..."
         ></textarea>
       </div>
       {message && (
-        <div className={`p-4 rounded-lg ${
-          status === 'success' ? 'bg-neutral-green/20 text-neutral-green' :
-          status === 'error' ? 'bg-red-500/20 text-red-500' :
-          'bg-neutral-violet/20 text-neutral-violet'
+        <div className={`p-4 rounded-lg transform transition-all duration-300 ${
+          status === 'success' ? 'bg-neutral-green/10 text-neutral-green border border-neutral-green/20' :
+          status === 'error' ? 'bg-red-500/10 text-red-500 border border-red-500/20' :
+          'bg-neutral-violet/10 text-neutral-violet border border-neutral-violet/20'
         }`}>
           {message}
         </div>
@@ -86,11 +89,21 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === 'loading'}
-        className={`w-full bg-neutral-green text-neutral-black font-semibold py-3 rounded-lg transition-colors ${
+        className={`w-full bg-neutral-green text-neutral-black font-medium py-3 rounded-lg transition-all transform hover:scale-[1.02] active:scale-[0.98] ${
           status === 'loading' ? 'opacity-50 cursor-not-allowed' : 'hover:bg-neutral-green/90'
         }`}
       >
-        {status === 'loading' ? 'Sending...' : 'Send Message'}
+        {status === 'loading' ? (
+          <span className="flex items-center justify-center gap-2">
+            <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
+              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+            </svg>
+            Sending...
+          </span>
+        ) : (
+          'Send Message'
+        )}
       </button>
     </form>
   );
