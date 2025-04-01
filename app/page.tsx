@@ -78,15 +78,15 @@ export default function Home() {
         </div>
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
           <svg
-            className="w-4 h-4 text-white/50"
+            className="w-3 h-3 text-white/30"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
+            strokeWidth={1.5}
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
               d="M19 14l-7 7m0 0l-7-7m7 7V3"
             />
           </svg>

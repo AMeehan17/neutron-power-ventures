@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'neutral-black': '#000000',
+        'neutral-black': '#0A0A0A',
         'neutral-violet': '#8A2BE2',
         'neutral-green': '#39FF14',
       },
@@ -25,12 +25,12 @@ const config: Config = {
         'scale-up': 'scaleUp 0.5s ease-out forwards',
         'scale-down': 'scaleDown 0.5s ease-out forwards',
         'rotate': 'rotate 0.5s ease-out forwards',
-        'bounce-slow': 'bounce 3s infinite',
+        'bounce-slow': 'bounce 2s infinite',
       },
       keyframes: {
         fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
@@ -61,8 +61,8 @@ const config: Config = {
           '100%': { transform: 'rotate(0)', opacity: '1' },
         },
         bounce: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
+          '0%, 100%': { transform: 'translateY(-25%)', animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)' },
+          '50%': { transform: 'translateY(0)', animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)' },
         },
       },
     },
