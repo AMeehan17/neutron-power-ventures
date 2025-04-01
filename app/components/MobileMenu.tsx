@@ -1,10 +1,22 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
 
   return (
     <div className="md:hidden">
@@ -39,8 +51,8 @@ export default function MobileMenu() {
 
       {/* Mobile menu overlay */}
       <div
-        className={`fixed inset-0 bg-neutral-black/95 backdrop-blur-lg z-50 transform transition-transform duration-300 ease-in-out ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed inset-0 bg-neutral-black/95 backdrop-blur-lg z-50 transform transition-all duration-300 ease-in-out ${
+          isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
         }`}
       >
         <div className="flex flex-col h-full p-6">
@@ -70,14 +82,14 @@ export default function MobileMenu() {
             <Link
               href="#mission"
               onClick={() => setIsOpen(false)}
-              className="text-2xl font-medium hover:text-neutral-green transition-colors"
+              className="text-2xl font-medium hover:text-neutral-green transition-colors transform hover:scale-105"
             >
               Mission
             </Link>
             <Link
               href="#contact"
               onClick={() => setIsOpen(false)}
-              className="text-2xl font-medium hover:text-neutral-green transition-colors"
+              className="text-2xl font-medium hover:text-neutral-green transition-colors transform hover:scale-105"
             >
               Contact
             </Link>
@@ -86,9 +98,10 @@ export default function MobileMenu() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsOpen(false)}
-              className="bg-neutral-green text-neutral-black px-6 py-3 rounded-full hover:bg-neutral-green/90 transition-colors font-medium text-lg"
+              className="bg-neutral-green text-neutral-black px-6 py-3 rounded-full hover:bg-neutral-green/90 transition-all transform hover:scale-105 font-medium text-lg relative overflow-hidden group"
             >
-              Schedule Meeting
+              <span className="relative z-10">Schedule Meeting</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-neutral-green to-neutral-violet opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </Link>
           </nav>
         </div>

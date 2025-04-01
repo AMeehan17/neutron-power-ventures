@@ -42,17 +42,18 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-neutral-black via-neutral-violet/10 to-neutral-green/5 z-0" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(138,43,226,0.1)_0%,transparent_70%)] z-0" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(57,255,20,0.05)_0%,transparent_70%)] z-0" />
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] z-0" />
         <div className="container mx-auto px-4 z-10 text-center">
           <div className="max-w-4xl mx-auto">
-            <div className="relative">
+            <div className="relative mb-12">
               <div className="absolute -inset-4 bg-neutral-violet/20 blur-3xl rounded-full animate-pulse" />
-              <h1 className="relative text-6xl md:text-8xl font-bold mb-8 leading-tight">
-                <span className="text-neutral-violet animate-fade-in">Neutron</span>{' '}
-                <span className="text-neutral-green animate-fade-in animation-delay-200">Power</span>{' '}
+              <h1 className="relative text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">
+                <span className="text-neutral-violet animate-fade-in block mb-2">Neutron</span>
+                <span className="text-neutral-green animate-fade-in animation-delay-200 block mb-2">Power</span>
                 <span className="text-white animate-fade-in animation-delay-400">Ventures</span>
               </h1>
             </div>
-            <p className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto text-white/90 leading-relaxed animate-fade-in animation-delay-600">
+            <p className="text-lg sm:text-xl md:text-2xl mb-12 max-w-2xl mx-auto text-white/90 leading-relaxed animate-fade-in animation-delay-600">
               Powering the future through strategic investments in nuclear technology
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in animation-delay-800">
@@ -75,7 +76,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
           <svg
             className="w-6 h-6 text-white/50"
             fill="none"
@@ -96,14 +97,45 @@ export default function Home() {
       <section id="mission" className="py-24 bg-neutral-black relative">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(57,255,20,0.05)_0%,transparent_70%)] z-0" />
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-            Our Mission
-          </h2>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto text-center text-white/90 leading-relaxed">
-            At Neutron Power Ventures, we&apos;re committed to accelerating the development of nuclear technology 
-            that will power our future. We invest in innovative companies that are pushing the boundaries 
-            of what&apos;s possible in nuclear energy, from advanced reactors to fusion technology.
-          </p>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 animate-fade-in">
+              Our Mission
+            </h2>
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed animate-fade-in animation-delay-200">
+              At Neutron Power Ventures, we&apos;re committed to accelerating the development of nuclear technology 
+              that will power our future. We invest in innovative companies that are pushing the boundaries 
+              of what&apos;s possible in nuclear energy, from advanced reactors to fusion technology.
+            </p>
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8">
+              <div className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-neutral-violet/50 transition-colors group">
+                <div className="w-12 h-12 bg-neutral-violet/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-neutral-violet/30 transition-colors">
+                  <svg className="w-6 h-6 text-neutral-violet" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Innovation</h3>
+                <p className="text-white/70">Pushing the boundaries of nuclear technology</p>
+              </div>
+              <div className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-neutral-green/50 transition-colors group">
+                <div className="w-12 h-12 bg-neutral-green/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-neutral-green/30 transition-colors">
+                  <svg className="w-6 h-6 text-neutral-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Investment</h3>
+                <p className="text-white/70">Strategic funding for promising ventures</p>
+              </div>
+              <div className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-neutral-violet/50 transition-colors group">
+                <div className="w-12 h-12 bg-neutral-violet/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-neutral-violet/30 transition-colors">
+                  <svg className="w-6 h-6 text-neutral-violet" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-2">Impact</h3>
+                <p className="text-white/70">Shaping the future of clean energy</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -111,9 +143,16 @@ export default function Home() {
       <section id="contact" className="py-24 bg-neutral-violet/5 relative">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(138,43,226,0.05)_0%,transparent_70%)] z-0" />
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Get in Touch</h2>
-          <div className="max-w-xl mx-auto bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
-            <ContactForm />
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 animate-fade-in">
+              Get in Touch
+            </h2>
+            <p className="text-lg md:text-xl text-white/90 mb-12 animate-fade-in animation-delay-200">
+              Ready to discuss your nuclear technology venture? We&apos;d love to hear from you.
+            </p>
+            <div className="max-w-xl mx-auto bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
+              <ContactForm />
+            </div>
           </div>
         </div>
       </section>
